@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body{
+          background-color: #011F3F;
+        }
+
+        h1{
+          font-family: "Press Start 2P";
+          font-size: 3rem;
+          color: #FEF2BF;
+          text-align: center;
+        }
+
+        h1:hover{
+          cursor: pointer;
+          text-decoration: underline;
+          /* text-decoration-color: ; */
+        }
+
+        .container, .heading{
+          display: flex;
+          justify-content: center;
+          margin-top: 90px;
+        }
+
+        .buttons{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-gap: 50px;
+        }
+
+        .btn{
+          width: 200px;
+          height: 200px;
+          border: solid black 10px;
+          border-radius: 25px;
+        }
+
+        .green{
+          background-color: green;
+        }
+
+        .red{
+          background-color: red;
+        }
+
+        .yellow{
+          background-color: yellow;
+        }
+
+        .blue{
+          background-color: blue;
+        }
+
+        .flash{
+          opacity: 0.5;
+        }
+
+        @media (max-width: 550px){
+          .buttons{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(1fr, 4);
+            grid-gap: 20px;
+          }
+
+          h1{
+            font-size: 2rem;
+          }
+
+          .btn{
+            width: 120px;
+            height: 120px;
+          }
+
+          .container, .heading{
+            margin-top: 30px;
+          }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="heading"><h1>Click Anywhere to Start</h1></div>
+    
+
+    <div class="container">
+      <div class="buttons">
+        <div id="green" class="btn green"></div>
+        <div id="red" class="btn red"></div>
+        <div id="yellow" class="btn yellow"></div>
+        <div id="blue" class="btn blue"></div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
