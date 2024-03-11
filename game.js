@@ -38,5 +38,3 @@ function validation(colour) {
         userClickedPattern = [];
     }   
 }
-
-$(".add").click(nextSequence);
