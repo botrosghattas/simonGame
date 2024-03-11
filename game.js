@@ -16,16 +16,13 @@ function nextSequence() {
     new Audio("sounds/"+randomChosenColour+".mp3").play();
     $("#"+randomChosenColour).fadeOut(150).fadeIn(150);
     $("h1").text("Level " + gamePattern.length)
-    console.log("game pattern is " + gamePattern);
 }
 
 function validation(colour) {
-    // console.log(colour);
     new Audio("sounds/" + colour + ".mp3").play();
     $("#"+colour).addClass("flash");
     setTimeout(() => $("#"+colour).removeClass("flash"), 150);
     userClickedPattern.push(colour);
-    console.log("user pattern is " + userClickedPattern)
     if (userClickedPattern[userClickedPattern.length-1] == gamePattern[userClickedPattern.length-1]) {
         if(userClickedPattern.length == gamePattern.length){
             setTimeout(nextSequence, 700);
