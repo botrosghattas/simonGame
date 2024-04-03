@@ -7,20 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>        
         body{
           background-color: #011F3F;
-          height: 100vh;
+          height: 90vh;
         }
 
-        h1{
+        .heading{
           font-family: "Press Start 2P";
           font-size: 3rem;
           color: #FEF2BF;
           text-align: center;
         }
 
-        .container, .heading{
+        .box, .heading{
           display: flex;
           justify-content: center;
           margin-top: 90px;
@@ -33,7 +34,7 @@
           grid-gap: 50px;
         }
 
-        .btn{
+        .button{
           width: 200px;
           height: 200px;
           border: solid black 10px;
@@ -65,16 +66,16 @@
             grid-gap: 10px;
           }
 
-          h1{
+          .heading{
             font-size: 1.3rem;
           }
 
-          .btn{
+          .button{
             width: 100px;
             height: 100px;
           }
 
-          .container, .heading{
+          .box, .heading{
             margin-top: 20px;
           }
         }
@@ -84,16 +85,52 @@
     <div class="heading"><h1>Click Anywhere to Start</h1></div>
     
 
-    <div class="container">
+    <div class="box">
       <div class="buttons">
-        <div id="green" class="btn green"></div>
-        <div id="red" class="btn red"></div>
-        <div id="yellow" class="btn yellow"></div>
-        <div id="blue" class="btn blue"></div>
+        <div id="green" class="button green"></div>
+        <div id="red" class="button red"></div>
+        <div id="yellow" class="button yellow"></div>
+        <div id="blue" class="button blue"></div>
       </div>
     </div>
 
+    <div class="d-flex justify-content-center mt-5">
+      <button class="btn btn-outline-light" id="instructions" data-bs-toggle="modal" data-bs-target=".modal">Instructions</button>
+    </div>
+
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1>Instructions</h1>
+            <button class="btn-close" data-bs-target=".modal" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              In each level, a new button is added to the sequence.<br>
+              You have to press all the buttons of the sequence from the begining.<br><br>
+              <strong>Example:</strong><br>
+              New button: red<br>
+              You press: red<br><br>
+              New button: green<br>
+              You press: red → green<br><br>
+              New button: yellow<br>
+              You press: red → green → yellow <br><br>
+              Enjoy!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-bs-dismiss="modal" data-bs-target=".modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="btn btn-primary">test</button> -->
+    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="game.js"></script>
   </body>
 </html>
